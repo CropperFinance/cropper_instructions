@@ -1,0 +1,30 @@
+
+[package]
+name = "cropper_farm_v1"
+version = "1.0.0"
+description = "cropper yield farming program"
+authors = ["Hongbo Li"]
+repository = ""
+license = "Apache-2.0"
+homepage = "https://solana.com/"
+edition = "2018"
+
+[features]
+no-entrypoint = []
+
+[dependencies]
+borsh = "0.9.1"
+borsh-derive = "0.9.1"
+solana-program = "1.7.8"
+num-derive = "0.3"
+num-traits = "0.2"
+thiserror = "1.0"
+spl-token = { version = "3.2.0", features = [ "no-entrypoint" ] }
+spl-math = { version = "0.1", features = [ "no-entrypoint" ] }
+
+[dev-dependencies]
+solana-program-test = "1.7.8"
+solana-sdk = "1.7.8"
+
+[lib]
+crate-type = ["cdylib", "lib"]
