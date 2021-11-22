@@ -18,40 +18,7 @@ use {
 #[derive(Clone, Debug, PartialEq, BorshSerialize, BorshDeserialize, BorshSchema)]
 pub enum FarmInstruction {
     ///   Set program data
-    ///   [w] - writable, [s] - signer
-    /// 
-    ///   0. `[w]` program account.
-    ///   1. `[s]` super owner of this program
-    ///   2. `[]` new super owner
-    ///   3. `[]` fee owner
-    ///   4. `[]` allowed creator
-    ///   5. `[]` AMM program id
-    ///   6. `[]` farm fee
-    ///   7. `[]` harvest fee numerator
-    ///   8. `[]` harvest fee denominator
-    ///   9. `[]` program id
-    SetProgramData {
-        #[allow(dead_code)]
-        super_owner: Pubkey,
-
-        #[allow(dead_code)]
-        fee_owner: Pubkey,
-
-        #[allow(dead_code)]
-        allowed_creator: Pubkey,
-
-        #[allow(dead_code)]
-        amm_program_id: Pubkey,
-
-        #[allow(dead_code)]
-        farm_fee: u64,
-
-        #[allow(dead_code)]
-        harvest_fee_numerator: u64,
-        
-        #[allow(dead_code)]
-        harvest_fee_denominator: u64,
-    },
+    SetProgramData ,
 
     ///   Initializes a new FarmPool.
     ///   These represent the parameters that will be included from client side
